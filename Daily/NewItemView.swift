@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NewItemView: View {
+    @Binding var isPresented: Bool
+
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Spacer()
@@ -30,11 +32,20 @@ struct NewItemView: View {
                 Divider()
             }
             VStack(alignment: .center) {
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: { self.isPresented = false }, label: {
                     Text("Add")
-                        .font(.system(.title, design: .serif))
-                }
+                        .font(.system(.title2, design: .serif))
+                        .fontWeight(.bold)
+                        .italic()
+                        .tracking(2)
+                        .foregroundColor(Color("TextInverted"))
+                        .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
+                        .frame(width: 144, height: 44)
+                        .background(Color("AccentColor"))
+                        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                })
             }
+            .frame(maxWidth: .infinity)
             Spacer()
         }
         .padding()
@@ -51,6 +62,6 @@ struct NewItemView: View {
 
 struct NewItemView_Previews: PreviewProvider {
     static var previews: some View {
-        NewItemView()
+        NewItemView(isPresented: .constant(true))
     }
 }

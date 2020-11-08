@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		963475E52556EA5100EAD6A3 /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963475E42556EA5100EAD6A3 /* NewItemView.swift */; };
 		96F53DFB2556D40C007DE937 /* DailyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F53DFA2556D40C007DE937 /* DailyApp.swift */; };
 		96F53DFD2556D40C007DE937 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F53DFC2556D40C007DE937 /* ContentView.swift */; };
 		96F53DFF2556D40C007DE937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F53DFE2556D40C007DE937 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		963475E42556EA5100EAD6A3 /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
 		96F53DF72556D40C007DE937 /* Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F53DFA2556D40C007DE937 /* DailyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyApp.swift; sourceTree = "<group>"; };
 		96F53DFC2556D40C007DE937 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				96F53DFA2556D40C007DE937 /* DailyApp.swift */,
+				963475E42556EA5100EAD6A3 /* NewItemView.swift */,
 				96F53E0C2556D6F3007DE937 /* IntroView.swift */,
 				96F53DFC2556D40C007DE937 /* ContentView.swift */,
 				96F53DFE2556D40C007DE937 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				963475E52556EA5100EAD6A3 /* NewItemView.swift in Sources */,
 				96F53DFD2556D40C007DE937 /* ContentView.swift in Sources */,
 				96F53DFB2556D40C007DE937 /* DailyApp.swift in Sources */,
 				96F53E0D2556D6F3007DE937 /* IntroView.swift in Sources */,
