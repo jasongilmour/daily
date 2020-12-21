@@ -1,8 +1,9 @@
 //
 //  SceneDelegate.swift
-//  Daily
+//  MakeItSo
 //
-//  Created by Jason Gilmour on 21/12/2020.
+//  Created by Peter Friese on 10/01/2020.
+//  Copyright © 2020 Google LLC. All rights reserved.
 //
 
 import UIKit
@@ -59,3 +60,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   }
 
 }
+

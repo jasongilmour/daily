@@ -1,9 +1,8 @@
 //
 //  TaskListViewModel.swift
-//  MakeItSo
+//  Daily
 //
-//  Created by Peter Friese on 13/01/2020.
-//  Copyright © 2020 Google LLC. All rights reserved.
+//  Created by Jason Gilmour on 07/11/2020.
 //
 
 import Foundation
