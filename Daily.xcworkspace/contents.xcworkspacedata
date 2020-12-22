@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/jason/development/Daily/Daily/App/DailyApp.swift">
+   </FileRef>
+   <FileRef
       location = "group:Daily.xcodeproj">
    </FileRef>
    <FileRef

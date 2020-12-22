@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		47E020F40610FFABB6C70DBC /* Pods_Daily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC4D562CBCBB0CF07E99DA5 /* Pods_Daily.framework */; };
+		96029A2625920ED300C25FEE /* DailyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96029A2525920ED300C25FEE /* DailyApp.swift */; };
 		96166C862590F8CB00880F6A /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96166C852590F8CB00880F6A /* AppDelegate+Injection.swift */; };
 		96166C8D2590F93200880F6A /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96166C8C2590F93200880F6A /* TaskRepository.swift */; };
 		963475E52556EA5100EAD6A3 /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963475E42556EA5100EAD6A3 /* NewItemView.swift */; };
@@ -17,7 +18,7 @@
 		9635A31A2590F74C000FFC4C /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635A3182590F74C000FFC4C /* TaskCellViewModel.swift */; };
 		9635A31B2590F74C000FFC4C /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9635A3192590F74C000FFC4C /* TaskListViewModel.swift */; };
 		9635A31F2590F7A8000FFC4C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9635A31E2590F7A8000FFC4C /* Podfile */; };
-		96F53DFD2556D40C007DE937 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F53DFC2556D40C007DE937 /* ContentView.swift */; };
+		96F53DFD2556D40C007DE937 /* TaskLiatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F53DFC2556D40C007DE937 /* TaskLiatView.swift */; };
 		96F53DFF2556D40C007DE937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F53DFE2556D40C007DE937 /* Assets.xcassets */; };
 		96F53E022556D40C007DE937 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F53E012556D40C007DE937 /* Preview Assets.xcassets */; };
 		96F53E0D2556D6F3007DE937 /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F53E0C2556D6F3007DE937 /* IntroView.swift */; };
@@ -27,6 +28,7 @@
 		3AC4D562CBCBB0CF07E99DA5 /* Pods_Daily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B7773DD7D9FBB9F15F05D6 /* Pods-Daily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily.release.xcconfig"; path = "Target Support Files/Pods-Daily/Pods-Daily.release.xcconfig"; sourceTree = "<group>"; };
 		9119B52B54F0E30FAE3E987B /* Pods-Daily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily.debug.xcconfig"; path = "Target Support Files/Pods-Daily/Pods-Daily.debug.xcconfig"; sourceTree = "<group>"; };
+		96029A2525920ED300C25FEE /* DailyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DailyApp.swift; path = /Users/jason/development/Daily/Daily/App/DailyApp.swift; sourceTree = "<absolute>"; };
 		96166C852590F8CB00880F6A /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 		96166C8C2590F93200880F6A /* TaskRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 		963475E42556EA5100EAD6A3 /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
@@ -37,7 +39,7 @@
 		9635A3192590F74C000FFC4C /* TaskListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		9635A31E2590F7A8000FFC4C /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		96F53DF72556D40C007DE937 /* Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daily.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		96F53DFC2556D40C007DE937 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		96F53DFC2556D40C007DE937 /* TaskLiatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskLiatView.swift; sourceTree = "<group>"; };
 		96F53DFE2556D40C007DE937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96F53E012556D40C007DE937 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96F53E032556D40C007DE937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,7 +88,7 @@
 			children = (
 				963475E42556EA5100EAD6A3 /* NewItemView.swift */,
 				96F53E0C2556D6F3007DE937 /* IntroView.swift */,
-				96F53DFC2556D40C007DE937 /* ContentView.swift */,
+				96F53DFC2556D40C007DE937 /* TaskLiatView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -94,6 +96,7 @@
 		9635A30A2590F63E000FFC4C /* App */ = {
 			isa = PBXGroup;
 			children = (
+				96029A2525920ED300C25FEE /* DailyApp.swift */,
 				9635A3022590F5B7000FFC4C /* AppDelegate.swift */,
 				9635A3062590F5D8000FFC4C /* SceneDelegate.swift */,
 				96166C852590F8CB00880F6A /* AppDelegate+Injection.swift */,
@@ -281,9 +284,10 @@
 				96166C862590F8CB00880F6A /* AppDelegate+Injection.swift in Sources */,
 				96166C8D2590F93200880F6A /* TaskRepository.swift in Sources */,
 				963475E52556EA5100EAD6A3 /* NewItemView.swift in Sources */,
-				96F53DFD2556D40C007DE937 /* ContentView.swift in Sources */,
+				96F53DFD2556D40C007DE937 /* TaskLiatView.swift in Sources */,
 				96F53E0D2556D6F3007DE937 /* IntroView.swift in Sources */,
 				9635A31A2590F74C000FFC4C /* TaskCellViewModel.swift in Sources */,
+				96029A2625920ED300C25FEE /* DailyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
