@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct NewItemView: View {
-    //    @ObservedObject var store = HabitStore()
     @ObservedObject var taskListVM = TaskListViewModel()
+    @ObservedObject var taskCellVM: TaskCellViewModel
     @Binding var isPresented: Bool
     @State private var habit: String = ""
+    var onCommit: (Result<Task, InputError>) -> Void = { _ in }
     
+//    @ObservedObject var store = HabitStore()
 //    var sections = ["Morning", "Afternoon", "Evening"]
 //    var frequencies = ["Daily", "Weekly", "Monthly"]
 //    @State private var selectedSectionIndes = 0
@@ -27,24 +29,31 @@ struct NewItemView: View {
         NavigationView {
             Form {
                 VStack(alignment: .leading) {
-                    TaskCell(taskCellVM: TaskCellViewModel.newTask()) { result in
-                        if case .success(let task) = result {
-                            self.taskListVM.addTask(task: task)
-                        }
-                        self.isPresented.toggle()
-                    }
                     
-//                    Section {
-//                        Text("Habit")
-//                            .font(.system(.caption, design: .serif))
-//                            .tracking(2)
-//                            .foregroundColor(Color("TextMuted"))
-//                            .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
-//                        TextField("Meditate", text: $habit)
-//                            .padding(.vertical, 8)
-//                        Divider()
-//                            .padding(.bottom)
-//                    }
+                    Section {
+                        Text("Habit")
+                            .font(.system(.caption, design: .serif))
+                            .tracking(2)
+                            .foregroundColor(Color("TextMuted"))
+                            .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
+                        
+                        TaskCell(taskCellVM: TaskCellViewModel.newTask()) { result in
+                            if case .success(let task) = result {
+                                taskListVM.addTask(task: task)
+                            }
+                        }
+                        
+                        TextField("Meditate", text: $habit,
+                                  onCommit: { result in
+                                    if case .success(let task) = result {
+                                        taskListVM.addTask(task: task)
+                                        isPresented.toggle()
+                                    }
+                                  })
+                            .padding(.vertical, 8)
+                        Divider()
+                            .padding(.bottom)
+                    }
                     //                    Section {
                     //                        Picker(selection: self.$selectedCrossSection, label: Text("Querschnitt")) {
                     //
@@ -100,7 +109,7 @@ struct NewItemView: View {
                     //                    }
                     Section {
                         VStack(alignment: .center) {
-                            Button( action: {}, label: {
+                            Button( action: { isPresented.toggle() }, label: {
                                 Text("Add")
                                     .font(.system(.title2, design: .serif))
                                     .fontWeight(.bold)
@@ -135,8 +144,25 @@ struct NewItemView: View {
     }
 }
 
+struct SheetTaskCell: View {
+    @ObservedObject var taskCellVM: TaskCellViewModel
+    var onCommit: (Result<Task, InputError>) -> Void = { _ in }
+
+    var body: some View {
+        TextField("Meditate", text: $taskCellVM.task.title,
+                  onCommit: {
+                    if !self.taskCellVM.task.title.isEmpty {
+                        self.onCommit(.success(self.taskCellVM.task))
+                    }
+                    else {
+                        self.onCommit(.failure(.empty))
+                    }
+                  }).id(taskCellVM.id)
+    }
+}
+
 struct NewItemView_Previews: PreviewProvider {
     static var previews: some View {
-        NewItemView(isPresented: .constant(true))
+        NewItemView(taskCellVM: TaskCellViewModel.newTask(), isPresented: .constant(true))
     }
 }

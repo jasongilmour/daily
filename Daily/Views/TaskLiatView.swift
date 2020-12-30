@@ -58,7 +58,7 @@ struct TaskListView: View {
                     }
                     .padding()
                     .sheet(isPresented: $showNewItemForm) {
-                        NewItemView(isPresented: self.$showNewItemForm)
+                        NewItemView(taskCellVM: TaskCellViewModel.newTask(), isPresented: self.$showNewItemForm)
                     }
                 }
             }
